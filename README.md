@@ -15,6 +15,7 @@ Training data and test data can be downloaded from https://drive.google.com/open
 By running model_builder.py, we build and save the model. By running face_key_points.py, we visualize our model performance.
 test_result01.png and test_result02.png show some of the testing results. We can see that this model captures the mouth, nose, eyes keypoints quite well regardless of whether there is eye glasses, or the mouse is open, or there is mustache, or the face is turning to other directin to some extend.
 
+However, when some of the face key points were blocked (by sun glasses, hair, hat) or do not exist in the image, the model prediction becomes bad. When the face angle becomes large (~ 45 degree), the model does not well, neither. When the mouth opens big with teeths showing obviously, the model performance is not good. Please see worst16_in_validation.png which shows the worst 16 face key points extractions from validation data set.
 
 To build and test the model, I used
 Python 3.7
