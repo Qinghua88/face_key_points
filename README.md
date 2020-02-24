@@ -7,12 +7,14 @@ left_eye_center_x	left_eye_center_y	right_eye_center_x	right_eye_center_y	left_e
 
 There are 15 keypoints we want to extract on a face. Each keypoint has a coordinate (x, y).
 So we have 15*2 = 30 numbers to predict in our model.
+The Image data can be reshape to an array with shape of (96, 96).
 For test data, it contains Image data but no keypoints labels.
 
 Training data and test data can be downloaded from https://drive.google.com/open?id=1qKj9qQvEqENVTU4LsobX_ilAK76JpwpY
 
 By running model_builder.py, we build and save the model. By running face_key_points.py, we visualize our model performance.
 test_result01.png and test_result02.png show some of the testing results. We can see that this model captures the mouth, nose, eyes keypoints quite well regardless of whether there is eye glasses, or the mouse is open, or there is mustache, or the face is turning to other directin to some extend.
+
 
 To build and test the model, I used
 Python 3.7
